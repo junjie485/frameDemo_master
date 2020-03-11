@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.BitmapShaderActivity">
+    <com.kuaqu.reader.module_my_view.utils.BitmapShaderView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="visible"/>
+    <com.kuaqu.reader.module_my_view.utils.ShimmerTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绿色闪光的召唤"
+        android:layout_margin="50dp"
+        android:textSize="32sp"
+        android:textColor="@color/black"/>
+    <com.kuaqu.reader.module_my_view.utils.RippleView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="波纹荡开按钮" />
+</LinearLayout>

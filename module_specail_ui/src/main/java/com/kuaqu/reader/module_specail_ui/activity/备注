@@ -1,0 +1,21 @@
+1.android中getWidth()和getMeasuredWidth()之间的区别
+getMeasuredWidth()是根据调用onMeasure()方法后获取到的控件宽度，是实际的view真实宽度，即使超过一屏，也是计算（屏幕内宽+屏幕外宽）
+getWidth()是根据onLayout()调用后获取到的。利用right-left得到。当超出一屏时，但父控件顶多一屏，所以getWidth()最大是一屏宽度。
+2.VelocityTracker:用于对触摸点的速度跟踪，方便获取触摸点的速度
+首先 (1)VelocityTracker vTracker =  VelocityTracker.obtain()；(2)在onTouchEvent事件中初始化 vTracker.addMoveMent(event);vTracker.computeCurrentVelocity(1000);
+;(3)可以通过 vTracker.getYVelocity()来获取速率，与速率阈值进行比较。(4)vTracker.recycle();
+3.Scroller弹性滑动
+首先(1)Scroller scroller=new Scroller(getContent())初始化 (2)在onTouchEvent事件松手时，来处理弹性滑动scroller.startScroller(getScrollX,getScrollY,dx,dy).
+(3)重写computeScroll()方法 if(scroller.computeScrollOffset){  scrollTo(scroller.getCurrX(), scroller.getCurrY());postInvalidate();}
+4.onLayout方法
+View坐标系是相对于父控件而言的，其中left，top，right，bottom是根据配置文件中的margain来得到的。一般自定义view不会用到。而自定义viewGroup常用，利用for循环
+遍历子孩子，控制子孩子之间的显示位置。
+5.ViewDragHelper的使用
+首先 ViewDragHelper helper=ViewDragHelper.create(this, 1.0f,new DragCallBack());其次将onInterceptTouchEvent把事件的拦截交给VDH，
+public boolean onInterceptTouchEvent(MotionEvent ev) {return mDragger.shouldInterceptTouchEvent(ev);}   public boolean onTouchEvent(MotionEvent event) { mDragger.processTouchEvent(event);
+return true;}
+回调中有几个方法 1.int clampViewPositionHorizontal (View child, int left, int dx)这个view能滑动的最大（或者负向最大）的横向坐标。
+2。int getViewHorizontalDragRange (View child)返回指定View在横向上能滑动的最大距离。3.void onEdgeDragStarted (int edgeFlags, int pointerId)当边缘开始拖动的时候，会调用这个回调
+4.void onViewDragStateChanged (int state)拖动状态改变时，会回调这个函数。5.void onViewPositionChanged (View changedView, int left, int top, int dx, int dy)
+当子视图位置变化时，会回调这个函数。6.void onViewReleased (View releasedChild, float xvel, float yvel)当手指从子视图松开时，会调用这个函数，同时返回在x轴和y轴上当前的速度。
+7.boolean tryCaptureView (View child, int pointerId)系统会依次列出这个父容器的子视图，你需要指定当前传入的这个视图是否可拖动，如果可拖动则返回true 否则为false

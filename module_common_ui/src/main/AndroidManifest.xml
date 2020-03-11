@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kuaqu.reader.module_common_ui">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 读联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 写联系人权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.ListTreeActivity"></activity>
+        <activity android:name=".activity.PictureCompressActivity" />
+        <activity android:name=".activity.StatusActivity" />
+        <activity android:name=".activity.CameraActivity" />
+        <activity android:name=".activity.DownLoadActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.RecordVideoActivity" />
+        <activity android:name=".activity.VideoPartActivity" />
+        <activity android:name=".activity.AudioActivity" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="1080" />
+        <meta-data
+            android:name="design_height"
+            android:value="1920" />
+
+        <service android:name=".service.MusicService" />
+        <service android:name=".service.MediaService" />
+        <service
+            android:name=".service.TestService"
+            android:exported="false" />
+        <service android:name=".service.DownLoadService" />
+
+        <activity android:name=".activity.CommonMainActivity" />
+        <activity android:name=".activity.LoadingActivity" />
+        <activity android:name=".activity.MusicActivity" />
+        <activity android:name=".activity.TextStyleActivity" />
+        <activity android:name=".activity.ApplyPermisionActivity" />
+        <activity android:name=".activity.RecyclerViewActivity" />
+        <activity android:name=".activity.DensityActivity" />
+        <activity android:name=".activity.VideoActivity" />
+        <activity android:name=".activity.ImageActivity" />
+        <activity android:name=".activity.StatusBarActivity">
+            <intent-filter>
+                <action android:name="com.ljj.MY_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.ljj.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

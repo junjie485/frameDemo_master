@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabMode="scrollable"
+        app:tabIndicatorHeight="0dp"
+        app:tabBackground="@drawable/tab_bg_line"
+        app:tabSelectedTextColor="@color/colorPrimary" />
+    <com.kuaqu.reader.module_specail_ui.utils.InnerRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv"/>
+
+</LinearLayout>

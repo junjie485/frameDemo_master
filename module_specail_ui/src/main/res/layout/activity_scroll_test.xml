@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kuaqu.reader.module_specail_ui.utils.StickyNavLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.TestActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/topView"
+        android:background="#4400ff00" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="软件介绍"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/nav"
+        android:background="@color/white"/>
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPager"/>
+</com.kuaqu.reader.module_specail_ui.utils.StickyNavLayout2>

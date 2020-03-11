@@ -1,0 +1,39 @@
+适配方案：
+density=(dpi/160);px=(dpi/160)*dp;px=density*dp,dpi一般是固定的，不过和设备尺寸是有关系的
+1.今日头条适配：屏幕总像素px/设计图总dp=density。只要保证屏幕总的dp不变，那么屏幕就能做到适配。只需要将得到的density应用到系统的density即可
+优点：使用成本非常低。侵入性非常低。可适配三方库的控件和系统的控件。缺点：适配范围是不可控的
+2.smallestWidth 限定符屏幕适配方案：values文件夹生成方式：使用ScreenMatch插件来进行生成，前提是module中要先有一套dimens.xml文件，它默认的基本dp是360，你也可以生成后，删掉，自行修改。
+优点：这种是宽高限定符适配的升级版，如果找不到指定分辨率，会自动查找距离目标像素最近的dimens.xml，适配范围自由。
+缺点：侵入性非常高，无法覆盖全部机型，特殊机型会有一定的偏差。
+
+mob分享：
+注意事项：1，应用签名使用md5，且不能有冒号，尽量小写。不要使用SHA1。2.如果是正式包签名，请打包测试，否则会分享不成功。
+
+recyclerView局部，全部刷新：
+刷新全部可见的item，notifyDataSetChanged()
+刷新指定item，notifyItemChanged(int)
+从指定位置开始刷新指定个item，notifyItemRangeChanged(int,int)
+插入、移动一个并自动刷新，notifyItemInserted(int)、notifyItemMoved(int)、notifyItemRemoved(int)
+局部刷新，notifyItemChanged(int, Object)
+注意：payloads是从notifyItemChanged(int, Object)中，或从notifyItemRangeChanged(int, int, Object)中传进来的Object集合
+如果payloads不为空并且viewHolder已经绑定了旧数据了，那么adapter会使用payloads参数进行布局刷新
+如果payloads为空，adapter就会重新绑定数据，也就是刷新整个item
+payloads只在布局刷新时有用。其余情况下，可忽略。
+
+视频播放的三种方式：
+1.MediaPlayer+SurfaceView:是视频播放的最原始方式，其他都是以该方式为基础进行封装的。与音频播放使用类似，只需要将SurfaceView与
+MediaPlayer相关联就可以了。SurfaceHolder holder = SurfaceView.getHolder(); MediaPlayer.setDisplay(holder);//将影像播放控件与媒体播放控件关联起来
+2.VideoView:系统自带播放器，自带进度条，播放，暂停等功能。videoView.setMediaController(new MediaController(this));videoView.setVideoPath(path);
+videoView.start();
+3.VitaMio框架：与前两种相比，他可以播放各种格式的视频
+
+Intent有七大属性：
+component(组件)：目的组件、
+action（动作）：用来表现意图的行动、
+category（类别）：用来表现动作的类别、
+data（数据）：表示与动作要操纵的数据、
+type（数据类型）：对于data范例的描写、
+extras（扩展信息）：扩展信息、
+Flags（标志位）：期望这个意图的运行模式
+
+

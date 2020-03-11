@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/common_media_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拍 照" />
+
+    <Button
+        android:id="@+id/common_media_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="录 音" />
+
+    <Button
+        android:id="@+id/common_media_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="视 频" />
+</LinearLayout>
+

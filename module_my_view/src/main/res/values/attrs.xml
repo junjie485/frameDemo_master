@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FoldTextView">
+        <attr name="showMaxLine" format="integer" />
+        <attr name="tipGravity" format="integer" />
+        <attr name="tipColor" format="reference|color" />
+        <attr name="tipClickable" format="boolean" />
+        <attr name="foldText" format="string" />
+        <attr name="expandText" format="string" />
+        <attr name="showTipAfterExpand" format="boolean" />
+        <attr name="isSetParentClick" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="CustomImageView">
+        <attr name="titleText" format="string"/>
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleTextColor" format="color"/>
+        <attr name="image" format="reference"/>
+        <attr name="imageScaleType" format="enum">
+            <enum name="fillXY" value="1"/>
+            <enum name="center" value="2"/>
+        </attr>
+
+    </declare-styleable>
+    <declare-styleable name="FButton">
+        <attr name="shadowEnabled" format="boolean" />
+        <attr name="buttonColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowHeight" format="dimension" />
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="WatchBoard">
+        <!--表盘的边距-->
+        <attr name="wb_padding" format="dimension"/>
+        <!--表盘文字大小-->
+        <attr name="wb_text_size" format="dimension"/>
+        <!--时针的宽度-->
+        <attr name="wb_hour_pointer_width" format="dimension"/>
+        <!--分针的宽度-->
+        <attr name="wb_minute_pointer_width" format="dimension"/>
+        <!--秒针的宽度-->
+        <attr name="wb_second_pointer_width" format="dimension"/>
+        <!--指针圆角值-->
+        <attr name="wb_pointer_corner_radius" format="dimension"/>
+        <!--指针超过中心点的长度-->
+        <attr name="wb_pointer_end_length" format="dimension"/>
+        <!--时刻刻度颜色-->
+        <attr name="wb_scale_long_color" format="color"/>
+        <!--非时刻刻度颜色-->
+        <attr name="wb_scale_short_color" format="color"/>
+        <!--时针颜色-->
+        <attr name="wb_hour_pointer_color" format="color"/>
+        <!--分针颜色-->
+        <attr name="wb_minute_pointer_color" format="color"/>
+        <!--秒针颜色-->
+        <attr name="wb_second_pointer_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SlantedTextView">
+        <attr name="slantedTextSize" format="dimension"/>
+        <attr name="slantedBackgroundColor" format="color"/>
+        <attr name="slantedText" format="string"/>
+        <attr name="slantedTextColor" format="color"/>
+        <attr name="slantedLength" format="dimension"/>
+        <attr name="slantedMode" format="enum">
+            <enum name="left" value="0"></enum>
+            <enum name="right" value="1"></enum>
+            <enum name="left_bottom" value="2"></enum>
+            <enum name="right_bottom" value="3"></enum>
+            <enum name="left_triangle" value="4"></enum>
+            <enum name="right_triangle" value="5"></enum>
+            <enum name="left_bottom_triangle" value="6"></enum>
+            <enum name="right_bottom_triangle" value="7"></enum>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SaleProgressView">
+        <attr name="sideColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="sideWidth" format="dimension" />
+        <attr name="overText" format="string" />
+        <attr name="nearOverText" format="string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="isNeedAnim" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">module_common_ui</string>
+    <string name="app_data">揽件方式：上门取件\n快递公司：顺丰快递\n预约时间：9月6号</string>
+</resources>

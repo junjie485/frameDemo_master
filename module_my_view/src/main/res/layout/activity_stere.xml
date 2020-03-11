@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#242A38"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".activity.StereActivity">
+    <com.kuaqu.reader.module_my_view.utils.StereoView
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/stereoView"
+        android:layout_marginTop="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_password"/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/gray"/>
+
+            <TextView
+                android:id="@+id/rv_password"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:text="GO"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_email"/>
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="Email"
+                android:textColorHint="@color/gray"/>
+
+            <TextView
+                android:id="@+id/rv_email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:text="GO"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/icon_user"/>
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:background="@null"
+                android:hint="UserName"
+                android:textColorHint="@color/gray"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/rv_username"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:text="GO"/>
+
+        </LinearLayout>
+
+    </com.kuaqu.reader.module_my_view.utils.StereoView>
+    <com.kuaqu.reader.module_my_view.utils.StereoView
+        android:id="@+id/stereoView2"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp">
+
+        <ImageView
+            android:background="@drawable/p10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:background="@drawable/p14"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:background="@drawable/p12"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:background="@drawable/p11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.kuaqu.reader.module_my_view.utils.StereoView>
+</LinearLayout>

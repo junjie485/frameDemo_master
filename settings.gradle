@@ -1,0 +1,1 @@
+include ':app', ':component_base', ':component_data', ':module_main_mall', ':module_common_ui', ':module_my_view', ':module_material_design', ':module_specail_ui', ':module_common_class'

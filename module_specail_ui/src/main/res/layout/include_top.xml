@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/img"
+        android:scaleType="fitXY"
+        android:src="@mipmap/a1"
+        android:visibility="visible" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="这里是标题"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="子标题"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文图文详情奥图文详情奥图文详情奥图文详情奥图文"></TextView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp">
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.3dp"
+            android:layout_weight="1"
+            android:background="#e0e0e0"></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="继续拖动，查看图文详情" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0.3dp"
+            android:layout_weight="1"
+            android:background="#e0e0e0"></View>
+
+    </LinearLayout>
+
+
+</LinearLayout>

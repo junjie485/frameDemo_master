@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.TimerActivity">
+    <com.kuaqu.reader.module_my_view.utils.FButton
+        android:id="@+id/main_start_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onStartTimer"
+        android:text="start run"
+        android:layout_marginTop="5dp"
+        app:buttonColor="@color/bar_grey"
+        android:textColor="@color/white"
+        app:cornerRadius="15dp"
+        app:shadowEnabled="false"
+        app:shadowHeight="5dp"/>
+
+    <com.kuaqu.reader.module_my_view.utils.FButton
+        android:id="@+id/main_stop_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop run"
+        android:onClick="onStopTimer"
+        android:layout_marginTop="5dp"
+        app:buttonColor="@color/bar_grey"
+        android:textColor="@color/white"
+        app:cornerRadius="15dp"
+        app:shadowEnabled="false"
+        app:shadowHeight="5dp"/>
+
+
+    <com.kuaqu.reader.module_my_view.utils.TimerTextView
+        android:id="@+id/timer_text_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#ff0000"
+        android:gravity="center_horizontal"
+        android:text="倒计时" />
+
+
+
+</LinearLayout>

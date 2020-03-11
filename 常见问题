@@ -1,0 +1,18 @@
+1.在壳app的build.gradle中忘记引用子模块，导致arouter跳转失败
+2.各模块之间类不要叫同一个名字，会导致跳转出错。
+3.activity与fragment、adapter通信可以使用set方法、传handle进去，接口回调。eventbus。广播
+4.contentProvider实现跨进程通信。
+        1.首先创建类继承contentProvider并重写insert、update、query等方法。2.在mainfest配置该provider信息，其中authorities是ContentProvider的唯一标识，也是外界应用访问的uri
+        3.在外界应用中创建对应provider的uri对象，然后通过getContentResolver().query();访问provider中的query方法。
+5.aidl实现跨进程通信：
+        1.首先在服务端创建aidl文件夹，然后创建aidl文件，并在文件中创建有参数的方法。2.创建service，并实现Binder类，从而实现aidl中的有参数的方法。
+        3.创建客户端，并将aidl文件从服务端copy进来。然后开启服务端的service（通过完整类名），实现serviceConnect类，获得aidl实体类。然后将要传递的参数
+        通过aidl.方法传递进入，得到结果值，完成通信。
+6.messenger实现跨进程通信：（messenger实际是对aidl的封装，底层是aidl实现的）
+        1.在服务端创建service，在service中创建Messenger类和对应的handle，并在IBind中返回该messenger.getbinder.
+        2.然后在客户端开启服务端service，并创建messenger和对应handle。在serviceConnect中获得messenger，并发消息传参给服务端。服务端在handle中接收。
+        3.如果服务端想要发消息给客户端，通过mag.replyTo返回一个指定messenger对象，然后发送消息出去。客户端通过创建一个新的messenger和handle来接收
+        服务端发来的消息，通过Message msg = Message.obtain(null,100);msg.replyTo=新的messenger对象，在handle中处理接收到的消息。
+7.桌面小部件widget开发：
+        1.编写widget布局，2在xml文件夹中创建appwidget-provider标签，加载布局，并设定刷新周期(最低30分钟)
+        3.创建类继承AppWidgetProvider,并重写onEnabled(),onreciver(),onUpdate()等方法。该类本质是广播

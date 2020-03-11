@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kuaqu.reader.module_specail_ui.utils.NestedScrollingDetailContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".activity.MyTestActivity">
+
+    <com.kuaqu.reader.module_specail_ui.utils.NestedScrollingWebView
+        android:id="@+id/web_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="nested_scroll_webview" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="不可滑动的View"
+        android:textSize="30dp" />
+
+    <com.kuaqu.reader.module_specail_ui.utils.MyTestRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.kuaqu.reader.module_specail_ui.utils.NestedScrollingDetailContainer>

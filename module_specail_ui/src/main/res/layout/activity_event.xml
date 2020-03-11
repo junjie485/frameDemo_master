@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <com.kuaqu.reader.module_specail_ui.utils.PullUpToLoadMore
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/top"
+        android:id="@+id/ptlm"
+        android:orientation="vertical">
+
+        <com.kuaqu.reader.module_specail_ui.utils.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <include layout="@layout/include_top"></include>
+
+        </com.kuaqu.reader.module_specail_ui.utils.MyScrollView>
+
+        <com.kuaqu.reader.module_specail_ui.utils.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <include layout="@layout/include_bottom"></include>
+
+            </LinearLayout>
+
+        </com.kuaqu.reader.module_specail_ui.utils.MyScrollView>
+
+    </com.kuaqu.reader.module_specail_ui.utils.PullUpToLoadMore>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/good_collection_llyt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/not_collect_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@mipmap/icon_collect_not"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="收  藏"
+                    android:textColor="#333333"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0.3dp"
+                android:layout_height="match_parent"
+                android:background="#e0e0e0"></TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@mipmap/good_icon_service"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="联系客服"
+                    android:textColor="#333333"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_shop_car_llyt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff6f06"
+                android:gravity="center"
+                android:text="加入购物车"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/buy_immediately_bt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ff0000"
+                android:gravity="center"
+                android:text="立即购买"
+                android:textColor="#FFF"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

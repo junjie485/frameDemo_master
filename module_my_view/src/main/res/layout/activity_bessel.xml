@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main_layout"
+    tools:context=".activity.BesselActivity">
+    <include layout="@layout/title_bar_common"/>
+    <com.kuaqu.reader.module_my_view.utils.WaterRipperView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/waterView"
+        android:visibility="visible"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="visible">
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/plus"
+            android:text="加入"
+            android:onClick="enterCart"
+            android:layout_alignParentRight="true"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_iv"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/detail_cart"/>
+    </RelativeLayout>
+    <com.kuaqu.reader.module_my_view.utils.Bezier3
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

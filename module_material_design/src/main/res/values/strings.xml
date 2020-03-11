@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">module_material_design</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="behavior_main_content">com.kuaqu.reader.module_material_design.behavior.MainContentBehavior</string>
+    <string name="behavior_main_header">com.kuaqu.reader.module_material_design.behavior.MainHeaderBehavior</string>
+    <string name="behavior_main_title">com.kuaqu.reader.module_material_design.behavior.MainTitleBehavior</string>
+    <string name="behavior_main_tab">com.kuaqu.reader.module_material_design.behavior.MainTabBehavior</string>
+
+    <string name="behavior_sample_header">com.kuaqu.reader.module_material_design.behavior.SampleHeaderBehavior</string>
+    <string name="behavior_recyclerview">com.kuaqu.reader.module_material_design.behavior.RecyclerViewBehavior</string>
+</resources>

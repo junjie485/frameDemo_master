@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".activity.ApplyPermisionActivity">
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="访问摄像头" />
+
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="读写权限" />
+    <Button
+        android:id="@+id/generics_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generricsMethod"
+        android:layout_marginTop="15dp"
+        android:text="泛型方法" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generricsLimit"
+        android:layout_marginTop="15dp"
+        android:text="有界的类型参数" />
+    <Button
+        android:id="@+id/generics_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generricsClass"
+        android:layout_marginTop="15dp"
+        android:text="泛型类" />
+    <Button
+        android:id="@+id/observer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="observerMode"
+        android:layout_marginTop="15dp"
+        android:text="观察者模式" />
+    <Button
+        android:id="@+id/adapter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="adapterMode"
+        android:layout_marginTop="15dp"
+        android:text="适配器模式" />
+    <Button
+        android:id="@+id/template_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="templateMode"
+        android:layout_marginTop="15dp"
+        android:text="模板方法" />
+    <Button
+        android:id="@+id/decorate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="decorateMode"
+        android:layout_marginTop="15dp"
+        android:text="装饰者模式" />
+</LinearLayout>

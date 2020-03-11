@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    tools:context=".activity.AnimationActivity">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:onClick="onTrans"
+        android:text="平移" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/button"
+        android:onClick="onScale"
+        android:text="缩放" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/button2"
+        android:onClick="onAlpha"
+        android:text="alpha" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/button3"
+        android:onClick="onRotate"
+        android:text="旋转" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/button4"
+        android:onClick="onSet"
+        android:text="set" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:id="@+id/target"
+        android:background="@color/blue"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/button"/>
+    <Button
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/target"
+        android:layout_marginTop="70dp"
+        android:text="开启动画"
+        android:onClick="onStartAnim"/>
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:id="@+id/tv_char"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="A"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/target"
+        android:layout_marginTop="150dp"
+        android:background="@color/color_orange"/>
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:id="@+id/tv_color"
+        android:text="颜色"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_char"
+        android:layout_marginTop="50dp"
+        android:background="@color/color_orange"/>
+    <com.kuaqu.reader.module_my_view.utils.ExpandRelateView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:id="@+id/contentRv"
+        android:layout_marginTop="450dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="恢复阿卡放马过来更加多了给楼上给谁看了多个实例发了多少改科陆啥都没干看来是基拉亏免费噶考虑过实发开发了"/>
+    </com.kuaqu.reader.module_my_view.utils.ExpandRelateView>
+</RelativeLayout>

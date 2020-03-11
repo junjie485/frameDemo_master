@@ -1,0 +1,33 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+    ext.kotlin_version = '1.2.71'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
+        // classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'      //dagger2远程工具地址配置
+        classpath 'me.tatarka:gradle-retrolambda:3.7.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"     //lambda配置
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://clojars.org/repo/" }//icepick配置
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

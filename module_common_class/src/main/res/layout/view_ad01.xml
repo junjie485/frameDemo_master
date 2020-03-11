@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热议"
+            android:padding="3dp"
+            android:textSize="12sp"
+            android:textColor="#F14C00"
+            android:background="@drawable/corner_bg"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大吉大利，今晚吃鸡"
+            android:textColor="#333"
+            android:padding="3dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:ellipsize="end" />
+    </LinearLayout>
+
+</LinearLayout>
